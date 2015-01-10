@@ -1,4 +1,3 @@
-/* global _, Backbone */
 'use strict';
 
 
@@ -36,4 +35,4 @@
 })( jQuery );
 
 // calling the fitText function on the herotext paragraph
-$(".herotext").fitText(1.5);
+$('.herotext').fitText(1.5);

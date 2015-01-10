@@ -41,6 +41,7 @@
 						<ul class="button-group">
 						<li><a href="#" class="button">About</a></li>
 						<li><a href="#" class="button">Work</a></li>
+						<li><a href="#" class="button">Blog</a></li>						
 						<li><a href="#" class="button">Contact</a></li>
 						</ul>
 					</div>
@@ -52,7 +53,8 @@
 					<hr>
 					<p class="introtext">My name is Whitney.</p>
 					<p class="herotext">I develop clean, simple solutions that speak across boundaries.</p>
-					<p class="introtext">I call Greenville, South Carolina home, but I've also lived in Germany. A true form-follows-function girl, I believe that a user's journey is just important as their destination. I specialize in identity and multicultural and multilingual projects, but also enjoy strong coffee, good books, and collecting stamps in my passport.</p>
+					<p class="introtext">I'm a designer, developer, world traveler, and lover of all things German. I believe form follows function, and that the journey is just important as the destination.</p>
+					<p class="introtext">I get excited about multicultural and multilingual projects, strong coffee, good books, and crafting really great JavaScript.</p>
 				</div>
 			</div>
 
@@ -102,22 +104,66 @@
 
 			<div class="row contact">
 				<hr>
+				<div class="small-12 small-centered medium-8 columns">
+					<h4>Contact</h4>
+					<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+						<div class="small-12 medium-8">
+							<label for="name">Name</label>
+							<input id="name" class="input" name="name" type="text" value="" size="30"/>
+						</div>
+						
+						<div class="small-12 medium-8">
+							<label for="email">Email</label>
+							<input id="email" class="input" name="email" type="text" value="" size="30"/>
+						</div>
+
+						<div class="small-12">
+							<label for="message">Message</label>
+							<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea>
+						</div>
+	
+						<p>Looking for my resume? You can download it <a href="WhitneyWilliamsResume.pdf" download="WhitneyWilliamsResume.pdf">here</a>.</p>
+
+						<input id="submit_button" type="submit" value="Send email" />
+					</form>
+				</div>
 			</div>
 
+		
+		<!-- Form -->
+			<div class="row contact">
+				<form action="form.php" method="post" enctype="multipart/form-data">
+	        
+	        <h1 class="title">Contact</h1>
+	        
+		    <label></label>
+		    <input name="name" required="required" placeholder="Your Name">
+		    
+		            
+		    <label></label>
+		    <input name="email" type="email" required="required" placeholder="Your Email">
+		            
+		    
+		    <label></label>
+		    <textarea name="message" cols="20" rows="5" required="required" placeholder="Message"></textarea>
+		    		            
+		    <input id="submit" name="submit" type="submit" value="Submit">
+	        
+	    </form>
+			</div>
+
+		<!-- /Form -->
+
 			<footer class="row">
-				<div class="large-12 columns">
-					<div class="row">
-						<div class="large-6 columns">
-							<p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Whitney Williams</p>
-						</div>
-						<div class="large-6 columns">
-							<ul class="inline-list right">
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Privacy</a></li>
-								<li><a href="#">Suscribe</a></li>
-							</ul>
-						</div>
-					</div>
+				<div class="small-8 columns">
+					<p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Whitney Williams</p>
+				</div>
+						
+				<div class="small-4 columns">
+					<ul class="inline-list right">
+						<li><a href="https://twitter.com/whitneyhacks" target="_blank"> <img class="twitter" src="images/twitter-logo.svg"> </a></li>
+						<li><a href="https://github.com/wweliz" target="_blank"> <img class="github" src="images/github-logo.svg"> </a></li>
+					</ul>
 				</div>
 			</footer>
 
@@ -135,13 +181,16 @@
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/fastclick/lib/fastclick.js"></script>
+		<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+		<script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
 		<script src="bower_components/foundation/js/foundation.js"></script>
-		
 		<!-- endbower -->
 		<!-- endbuild -->
 
 		<!-- build:js scripts/main.js -->
 		<script src="scripts/main.js"></script>
+		<script src="scripts/contact-form.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>

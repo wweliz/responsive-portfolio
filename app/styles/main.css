@@ -86,3 +86,6 @@ footer {
 footer a:hover {
   color: rgba(0, 0, 0, 0.4);
   background-color: transparent; }
+
+footer img {
+  height: 24px; }
